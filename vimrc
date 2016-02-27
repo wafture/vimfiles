@@ -12,7 +12,6 @@ syntax enable
 set et
 set wrap
 set number
-set autoindent
 set nocompatible
 set background=dark
 set formatoptions=qrn1
@@ -39,8 +38,9 @@ set nowritebackup
 " Common (tabs)
 "
 set smarttab
-set expandtab
 set tabstop=4
+set autoindent
+set noexpandtab
 set shiftwidth=4
 
 "
