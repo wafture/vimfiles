@@ -93,18 +93,3 @@ let g:vim_json_syntax_conceal = 0
 "
 let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
-
-"
-" Paste
-"
-let &t_SI .= "\<Esc>[?2004h"
-let &t_EI .= "\<Esc>[?2004l"
-
-inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
-
-function! XTermPasteBegin()
-    set pastetoggle=<Esc>[201~
-    set paste
-    return "
-endfunction"]]]]"
-
