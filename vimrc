@@ -87,6 +87,10 @@ let g:gruvbox_contrast_dark='hard'
 "
 let g:vim_json_syntax_conceal = 0
 
+"
+" Puppet
+"
+autocmd FileType *.pp set tabstop=2 shiftwidth=2 expandtab
 
 "
 " Syntastic
