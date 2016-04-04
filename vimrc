@@ -3,9 +3,6 @@
 "
 execute pathogen#infect()
 
-"
-" Common (all)
-"
 syntax on
 syntax enable
 
@@ -16,6 +13,23 @@ set nocompatible
 set background=dark
 set formatoptions=qrn1
 set backspace=indent,eol,start
+set nobackup
+set noswapfile
+set nowritebackup
+set smarttab
+set tabstop=2
+set expandtab
+set autoindent
+set shiftwidth=2
+set showmatch
+set complete-=i
+set ruler
+set showcmd
+set ttimeout
+set incsearch
+set shiftround
+set laststatus=2
+set ttimeoutlen=50
 
 "
 " 80 character line limit
@@ -28,46 +42,6 @@ else
 endif
 
 "
-" Common (swap)
-"
-set nobackup
-set noswapfile
-set nowritebackup
-
-"
-" Common (tabs)
-"
-set smarttab
-set tabstop=4
-set autoindent
-set noexpandtab
-set shiftwidth=4
-
-"
-" Common (match)
-"
-set showmatch
-set complete-=i
-
-"
-" Jessie Frazelle
-"
-set ruler
-set showcmd
-set ttimeout
-set incsearch
-set shiftround
-set laststatus=2
-set ttimeoutlen=50
-
-"
-" Git Gutter
-"
-let g:gitgutter_eager = 1
-let g:gitgutter_realtime = 1
-let g:gitgutter_sign_column_always = 1
-
-"
 " Go
 "
 let g:go_highlight_methods = 1
@@ -77,23 +51,11 @@ let g:go_highlight_functions = 1
 let g:go_highlight_build_constraints = 1
 
 "
-" Gruvbox Colorscheme
+" Theme/Colors
 "
 colorscheme gruvbox
 let g:gruvbox_contrast_dark='hard'
-
-"
-" JSON
-"
-let g:vim_json_syntax_conceal = 0
-
-"
-" Puppet
-"
-autocmd FileType *.pp set tabstop=2 shiftwidth=2 expandtab
-
-"
-" Syntastic
-"
-let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
-let g:syntastic_mode_map = { 'mode': 'active', 'passive_filetypes': ['go'] }
+let g:airline_theme='base16'
+let g:indentLine_leadingSpaceEnabled = 1
+let g:indentLine_leadingSpaceChar = '·'
+autocmd BufWritePre * StripWhitespace
