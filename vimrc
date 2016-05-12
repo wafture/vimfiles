@@ -54,8 +54,8 @@ let g:go_highlight_build_constraints = 1
 " Theme/Colors
 "
 colorscheme gruvbox
-let g:gruvbox_contrast_dark='hard'
 let g:airline_theme='base16'
-let g:indentLine_leadingSpaceEnabled = 1
-let g:indentLine_leadingSpaceChar = '·'
+let g:gruvbox_contrast_dark='hard'
 autocmd BufWritePre * StripWhitespace
+let g:indentLine_leadingSpaceChar = '·'
+let g:indentLine_leadingSpaceEnabled = 1
