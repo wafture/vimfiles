@@ -30,6 +30,7 @@ set incsearch
 set shiftround
 set laststatus=2
 set ttimeoutlen=50
+autocmd FileType make setlocal noexpandtab
 
 "
 " 80 character line limit
@@ -59,3 +60,4 @@ let g:gruvbox_contrast_dark='hard'
 autocmd BufWritePre * StripWhitespace
 let g:indentLine_leadingSpaceChar = '·'
 let g:indentLine_leadingSpaceEnabled = 1
+
