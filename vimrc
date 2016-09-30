@@ -30,7 +30,6 @@ set incsearch
 set shiftround
 set laststatus=2
 set ttimeoutlen=50
-autocmd FileType make setlocal noexpandtab
 
 "
 " 80 character line limit
@@ -41,6 +40,11 @@ if exists('+colorcolumn')
 else
 	au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
 endif
+
+"
+" Makefile
+"
+autocmd FileType make setlocal noexpandtab
 
 "
 " Go
