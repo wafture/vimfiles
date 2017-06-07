@@ -19,3 +19,6 @@
 [submodule "bundle/whitespace"]
 	path = bundle/whitespace
 	url = https://github.com/ntpeters/vim-better-whitespace
+[submodule "bundle/angular"]
+	path = bundle/angular
+	url = https://github.com/burnettk/vim-angular.git
