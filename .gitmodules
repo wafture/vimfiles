@@ -22,3 +22,6 @@
 [submodule "bundle/angular"]
 	path = bundle/angular
 	url = https://github.com/burnettk/vim-angular.git
+[submodule "bundle/hcl"]
+	path = bundle/hcl
+	url = https://github.com/fatih/vim-hclfmt.git
