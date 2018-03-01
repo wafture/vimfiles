@@ -3,10 +3,9 @@
 all: clean setup links
 
 setup:
-	@git submodule update --init --recursive
-	@git submodule foreach git checkout master
-	@git submodule foreach git fetch -p
-	@git submodule foreach git pull origin master
+	@git clone git@github.com:fatih/vim-go bundle/golang
+	@git clone git@github.com:Yggdroot/indentLine bundle/indent
+	@git clone git@github.com:morhetz/gruvbox bundle/theme
 
 clean:
 	@unlink $(HOME)/.vim >/dev/null 2>&1; true
