@@ -1,4 +1,4 @@
-.PHONY: default help clean
+.PHONY: default help clean install
 
 default: help
 help:
