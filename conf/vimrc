@@ -23,6 +23,7 @@ set noswapfile
 set autoindent
 set shiftwidth=2
 set nowritebackup
+set background=dark
 set backspace=indent,eol,start
 
 try
@@ -31,6 +32,7 @@ try
   " VIMRC: theme
   "
   colorscheme gruvbox
+  let g:gruvbox_contrast_dark=hard
 
   "
   " VIMRC: Go
