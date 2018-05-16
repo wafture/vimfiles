@@ -3,8 +3,8 @@ call plug#begin('~/.vim/plug')
 
   " plug: plugins
   Plug 'fatih/vim-go'
-  Plug 'morhetz/gruvbox'
   Plug 'Yggdroot/indentLine'
+  Plug 'ntpeters/vim-better-whitespace'
 
 " plug: end
 call plug#end()
@@ -29,20 +29,10 @@ set backspace=indent,eol,start
 try
 
   "
-  " VIMRC: theme
+  " VIMRC: Whitespace
   "
-  colorscheme gruvbox
-  let g:gruvbox_contrast_dark=hard
-
-  "
-  " VIMRC: Go
-  "
-  let g:go_highlight_methods = 1
-  let g:go_highlight_structs = 1
-  let g:go_highlight_functions = 1
-  let g:go_highlight_operators = 1
-  let g:go_highlight_extra_types = 1
-  let g:go_highlight_build_constraints = 1
+  let g:better_whitespace_enabled=1
+  let g:strip_whitespace_on_save=1
 
   "
   " VIMRC: Line Indents
@@ -54,6 +44,16 @@ try
   " VIMRC: Makefile
   "
   autocmd FileType make setlocal noexpandtab
+
+  "
+  " VIMRC: Go
+  "
+  let g:go_highlight_methods = 1
+  let g:go_highlight_structs = 1
+  let g:go_highlight_functions = 1
+  let g:go_highlight_operators = 1
+  let g:go_highlight_extra_types = 1
+  let g:go_highlight_build_constraints = 1
 
 catch
 endtry
