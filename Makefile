@@ -1,26 +1,18 @@
 .PHONY: default help clean install
 
-default: help
+default: clean install
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
 		awk 'BEGIN {FS = ":.*?## "}; {printf "\033[m%10-s %s\n\033[0m", $$1, $$2}'
 #
 # make: info
 #
-APP_NAME    := vimfiles
-APP_VERSION := 1.0
-GIT_COMMIT  := $(shell git rev-list --count HEAD)
-GIT_BRANCH  := $(shell git rev-parse --abbrev-ref HEAD)
-ifeq ($(GIT_BRANCH), master)
-	APP_VERSION := $(APP_VERSION).$(GIT_COMMIT)
-else
-	APP_VERSION := $(APP_VERSION).$(GIT_COMMIT).$(GIT_BRANCH)
-endif
+NAME := vimfiles
 
 #
 # make: formatted logger
 #
-log := `/bin/date "+%Y-%m-%d %H:%M:%S %z [$(APP_NAME)-$(APP_VERSION)]"`
+log := `/bin/date "+%Y-%m-%d %H:%M:%S %z [$(NAME)]"`
 
 install: ## install vim configuration
 	@echo $(log) "installing vim-plug"
