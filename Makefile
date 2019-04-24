@@ -25,6 +25,9 @@ install: ## install vim configuration
 	@echo $(log) "installing vim plug-ins"
 	@vim +PlugInstall -c q -c q
 
+	@echo $(log) "installing go binaries required for vim-go"
+	@vim +GoInstallBinaries -c q -c q
+
 clean: ## clean workspace and configurations
 	@echo $(log) "cleaning vim workspace"
 	@rm -f $(HOME)/.vimrc >/dev/null 2>&1; true
